@@ -1,6 +1,8 @@
 package dao;
 
 import model.Customer;
+import model.Phone;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -21,6 +23,11 @@ public class CustomerDAO {
     public static Customer updateCustomer(Customer phone){
         customerMap.put(phone.getId(), phone);
         return phone;
+    }
+
+    public static List<Phone> getCustomerPhones(Integer id){
+        Customer customer = customerMap.get(id);
+        return customer.getPhoneList();
     }
 
     public static List<Customer> getAllCustomers(){
