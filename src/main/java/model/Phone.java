@@ -4,7 +4,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement(name = "phone")
 public class Phone {
-    Integer id;
+    private Integer id;
     private String number;
     private Boolean activated;
 

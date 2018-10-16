@@ -17,7 +17,8 @@ public class PhoneService {
     }
 
     @Path("/{phoneId}/activate")
-    @PUT
+    @GET
+    @Produces(MediaType.APPLICATION_JSON)
     public Phone activatePhone(@PathParam("phoneId") Integer id){
         return PhoneDAO.activatePhone(id);
     }
